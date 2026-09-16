@@ -1,0 +1,6 @@
+# robots.txt for Annapoorani Trust (https://ilangathirtrust.org/)
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ilangathirtrust.org/sitemap.xml

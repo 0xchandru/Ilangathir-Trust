@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Ilangathir Trust | படத்தொகுப்பு — இளங்கதிர் அறக்கட்டளை</title>
+    <meta name="theme-color" content="#1a2744">
+    <meta name="description"
+        content="View photos and moments from Ilangathir Trust's charitable activities — food distribution, education programs, health camps, and community events in Kallupatti, Dindigul.">
+    <meta name="author" content="Ilangathir Trust">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gallery — Ilangathir Trust">
+    <meta property="og:description"
+        content="Moments of compassion and service captured during Ilangathir Trust's community programs.">
+
+    <link rel="icon" type="image/x-icon" href="assets/icons/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=1.3">
+
+    <style>
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--amber-deep);
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--amber-soft) 100%);
+        }
+
+        .gallery-placeholder span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--slate-light);
+        }
+
+        .gallery-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--slate-light);
+        }
+
+        .gallery-empty i {
+            font-size: 3rem;
+            color: var(--border);
+            margin-bottom: 16px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="site-header"></header>
+
+    <main>
+        <!-- ════════ PAGE BANNER ════════ -->
+        <section class="page-banner" aria-label="Page banner">
+            <div class="hero-pattern"></div>
+            <div class="container">
+                <h1 data-i18n="gallery_page_title">Photo Gallery</h1>
+                <p data-i18n="gallery_page_desc">Moments captured during our events and community service activities.
+                </p>
+                <div class="breadcrumb">
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <span>/</span>
+                    <span class="current" data-i18n="nav_gallery">Gallery</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ GALLERY ════════ -->
+        <section class="section" aria-label="Photo gallery">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label" data-i18n="gallery_label">OUR MOMENTS</span>
+                    <h2 data-i18n="gallery_title">Gallery</h2>
+                    <p data-i18n="gallery_desc">Capturing moments of compassion, service, and community togetherness.
+                    </p>
+                </div>
+
+                <!-- Filters -->
+                <div class="gallery-filters reveal" id="galleryFilters">
+                    <button class="gallery-filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                    <button class="gallery-filter-btn" data-filter="food" data-i18n="filter_food">Food</button>
+                    <button class="gallery-filter-btn" data-filter="education"
+                        data-i18n="filter_education">Education</button>
+                    <button class="gallery-filter-btn" data-filter="events" data-i18n="filter_events">Events</button>
+                    <button class="gallery-filter-btn" data-filter="community"
+                        data-i18n="filter_community">Community</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid stagger" id="galleryGrid">
+                    <!-- Food -->
+                    <div class="gallery-item reveal" data-category="food" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-bowl-food"></i>
+                            <span>Food Distribution</span>
+                        </div>
+                        <div class="gallery-overlay"><span data-i18n="svc_food_title">Food Distribution</span></div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="food" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Community Meal</span>
+                        </div>
+                        <div class="gallery-overlay"><span>Community Meal</span></div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="gallery-item reveal" data-category="education" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Education Program</span>
+                        </div>
+                        <div class="gallery-overlay"><span data-i18n="svc_edu_title">Education Support</span></div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="education" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                            <span>Student Scholarship</span>
+                        </div>
+                        <div class="gallery-overlay"><span>Student Scholarship</span></div>
+                    </div>
+
+                    <!-- Events -->
+                    <div class="gallery-item reveal" data-category="events" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>Trust Event</span>
+                        </div>
+                        <div class="gallery-overlay"><span>Trust Event</span></div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="events" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Inauguration</span>
+                        </div>
+                        <div class="gallery-overlay"><span>Inauguration</span></div>
+                    </div>
+
+                    <!-- Community -->
+                    <div class="gallery-item reveal" data-category="community" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-people-group"></i>
+                            <span>Community Service</span>
+                        </div>
+                        <div class="gallery-overlay"><span data-i18n="svc_welfare_title">Community Welfare</span></div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="community" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <span>Outreach Program</span>
+                        </div>
+                        <div class="gallery-overlay"><span>Outreach Program</span></div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="community" onclick="openLightbox('')">
+                        <div class="gallery-placeholder">
+                            <i class="fa-solid fa-shirt"></i>
+                            <span>Clothing Drive</span>
+                        </div>
+                        <div class="gallery-overlay"><span>Clothing Drive</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ CTA ════════ -->
+        <section class="cta-section" aria-label="Call to action">
+            <div class="container">
+                <h2 class="reveal" data-i18n="cta_title">Join Us in Making a Difference</h2>
+                <p class="reveal" data-i18n="cta_desc">Every contribution helps us create lasting positive change in our
+                    community.</p>
+                <div class="cta-actions reveal">
+                    <a href="contact.html" class="btn btn-amber" data-i18n="btn_get_involved">Get Involved</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="btn_contact_us">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close"><i
+                class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-img" src="" alt="Gallery preview">
+    </div>
+
+    <footer id="site-footer" class="footer"></footer>
+
+    <script src="shared.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initSite('gallery');
+
+            // Gallery filter
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const items = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        const cat = item.getAttribute('data-category');
+                        if (filter === 'all' || cat === filter) {
+                            item.style.display = '';
+                            item.style.animation = 'pageLoad 0.4s ease-out';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

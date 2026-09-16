@@ -1,0 +1,45 @@
+{
+  "_README": "Enter only the filenames (e.g. 'hero.jpg'). Place the actual image files inside the 'assets/images' folder.",
+  
+  "_comment_hero": "Recommended size: 1920x1080px (16:9) - Large background for the home page",
+  "hero_background": "",
+  
+  "_comment_about": "Recommended size: 800x600px (4:3) - Image for the About Us story section",
+  "about_story": "",
+
+  "_comment_service_food": "Recommended size: 600x450px (4:3) - Food distribution service",
+  "service_food": "",
+
+  "_comment_service_edu": "Recommended size: 600x450px (4:3) - Education support service",
+  "service_education": "",
+
+  "_comment_service_health": "Recommended size: 600x450px (4:3) - Health camp service",
+  "service_health": "",
+
+  "_comment_service_elderly": "Recommended size: 600x450px (4:3) - Elderly care service",
+  "service_elderly": "",
+
+  "_comment_service_welfare": "Recommended size: 600x450px (4:3) - Community welfare service",
+  "service_welfare": "",
+
+  "_comment_service_women": "Recommended size: 600x450px (4:3) - Women empowerment service",
+  "service_women": "",
+
+  "_comment_gallery_1": "Recommended size: 800x600px (4:3) - Gallery item (Food)",
+  "gallery_1": "",
+
+  "_comment_gallery_2": "Recommended size: 800x600px (4:3) - Gallery item (Food)",
+  "gallery_2": "",
+
+  "_comment_gallery_3": "Recommended size: 800x600px (4:3) - Gallery item (Education)",
+  "gallery_3": "",
+
+  "_comment_gallery_4": "Recommended size: 800x600px (4:3) - Gallery item (Health)",
+  "gallery_4": "",
+
+  "_comment_gallery_5": "Recommended size: 800x600px (4:3) - Gallery item (Events)",
+  "gallery_5": "",
+
+  "_comment_gallery_6": "Recommended size: 800x600px (4:3) - Gallery item (Community)",
+  "gallery_6": ""
+}
