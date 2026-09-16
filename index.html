@@ -68,70 +68,78 @@
     <header id="site-header"></header>
 
     <main>
-        <!-- ════════ HERO ════════ -->
-        <section class="hero hero-grand-center" aria-label="Hero">
+        <!-- ════════ HERO (PREMIUM 2-COLUMN) ════════ -->
+        <section class="hero hero-split" aria-label="Hero">
             <div class="hero-bg" id="hero-bg">
-                <div class="hero-ambient-orb hero-orb-center"></div>
                 <div class="hero-ambient-orb hero-orb-left"></div>
                 <div class="hero-ambient-orb hero-orb-right"></div>
                 <div class="hero-pattern"></div>
             </div>
                                     
-            <div class="hero-center-container container">
-                <!-- Top Trust Pill Badge -->
-                <div class="hero-trust-badge reveal">
-                    <span class="trust-badge-dot"></span>
-                    <span data-i18n="hero_badge">Dedicated to Public Welfare</span>
-                    <span class="trust-badge-divider">•</span>
-                    <span class="trust-badge-sub" data-i18n="reg_badge_text">Registered Non-Profit Trust</span>
-                </div>
+            <div class="hero-split-container">
+                <!-- Left Column: Rich Trust Presentation -->
+                <div class="hero-content">
+                    <!-- Grand Title -->
+                    <h1 class="hero-title reveal" data-i18n="hero_title" data-i18n-html>
+                        Empowering Lives,<br><span class="accent">Building Hope</span>
+                    </h1>
 
-                <!-- Grand Title -->
-                <h1 class="hero-grand-title reveal" data-i18n="hero_title" data-i18n-html>
-                    Empowering Lives,<br><span class="accent">Building Hope</span>
-                </h1>
+                    <!-- Illuminated Sacred Quote Card -->
+                    <div class="hero-quote-card reveal">
+                        <i class="fa-solid fa-quote-left quote-mark quote-left"></i>
+                        <p class="hero-quote-text" data-i18n="hero_quote">
+                            "Rather than folding both hands to pray to God, extend one hand to help — two hands will worship you as God…"
+                        </p>
+                        <i class="fa-solid fa-quote-right quote-mark quote-right"></i>
+                    </div>
 
-                <!-- Illuminated Sacred Quote Card -->
-                <div class="hero-quote-card reveal">
-                    <i class="fa-solid fa-quote-left quote-mark quote-left"></i>
-                    <p class="hero-quote-text" data-i18n="hero_quote">
-                        "Rather than folding both hands to pray to God, extend one hand to help — two hands will worship you as God…"
+                    <!-- Subtitle -->
+                    <p class="hero-subtitle reveal" data-i18n="hero_subtitle">
+                        Ilangathir Trust stands as a beacon of kindness in Kallupatti, Dindigul — driving grassroots initiatives in nutrition, education, elderly support, and rural healthcare.
                     </p>
-                    <i class="fa-solid fa-quote-right quote-mark quote-right"></i>
+
+                    <!-- Action CTA Buttons -->
+                    <div class="hero-actions reveal">
+                        <button type="button" class="btn btn-amber btn-lg btn-hero-donate" onclick="openDonationModal()">
+                            <i class="fa-solid fa-heart pulse-heart"></i> <span data-i18n="btn_donate">Donate Now</span>
+                        </button>
+                        <a href="about.html" class="btn btn-outline btn-lg" data-i18n="btn_learn_more">
+                            <i class="fa-solid fa-compass"></i> Discover Our Story
+                        </a>
+                        <a href="services.html" class="btn btn-ghost btn-lg" data-i18n="btn_our_services">
+                            <i class="fa-solid fa-hand-holding-heart"></i> Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Key Impact Feature Badges (Pill Strip) -->
+                    <div class="hero-impact-strip reveal">
+                        <a href="services.html" class="hero-impact-pill">
+                            <span class="pill-icon"><i class="fa-solid fa-bowl-food"></i></span>
+                            <span class="pill-text" data-i18n="hero_pill_food">Wholesome Meals</span>
+                        </a>
+                        <a href="services.html" class="hero-impact-pill">
+                            <span class="pill-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                            <span class="pill-text" data-i18n="hero_pill_edu">Student Scholarships</span>
+                        </a>
+                        <a href="services.html" class="hero-impact-pill">
+                            <span class="pill-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                            <span class="pill-text" data-i18n="hero_pill_health">Free Medical Camps</span>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Subtitle -->
-                <p class="hero-grand-subtitle reveal" data-i18n="hero_subtitle">
-                    Ilangathir Trust stands as a beacon of kindness in Kallupatti, Dindigul — driving grassroots initiatives in nutrition, education, elderly support, and rural healthcare.
-                </p>
-
-                <!-- Action CTA Buttons -->
-                <div class="hero-grand-actions reveal">
-                    <button type="button" class="btn btn-amber btn-lg btn-hero-donate" onclick="openDonationModal()">
-                        <i class="fa-solid fa-heart pulse-heart"></i> <span data-i18n="btn_donate">Donate Now</span>
-                    </button>
-                    <a href="about.html" class="btn btn-outline btn-lg" data-i18n="btn_learn_more">
-                        <i class="fa-solid fa-compass"></i> Discover Our Story
-                    </a>
-                    <a href="services.html" class="btn btn-ghost btn-lg" data-i18n="btn_our_services">
-                        <i class="fa-solid fa-hand-holding-heart"></i> Explore Services
-                    </a>
-                </div>
-
-                <!-- Key Impact Feature Badges (Pill Strip) -->
-                <div class="hero-impact-strip reveal">
-                    <a href="services.html" class="hero-impact-pill">
-                        <span class="pill-icon"><i class="fa-solid fa-bowl-food"></i></span>
-                        <span class="pill-text" data-i18n="hero_pill_food">Wholesome Meals</span>
-                    </a>
-                    <a href="services.html" class="hero-impact-pill">
-                        <span class="pill-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-                        <span class="pill-text" data-i18n="hero_pill_edu">Student Scholarships</span>
-                    </a>
-                    <a href="services.html" class="hero-impact-pill">
-                        <span class="pill-icon"><i class="fa-solid fa-heart-pulse"></i></span>
-                        <span class="pill-text" data-i18n="hero_pill_health">Free Medical Camps</span>
-                    </a>
+                <!-- Right Column: Visual Showcase with Real Charity Photo & Floating Impact Badges -->
+                <div class="hero-visual reveal">
+                    <div class="hero-image-card">
+                        <!-- Ambient back-glow -->
+                        <div class="hero-image-glow"></div>
+                        
+                        <!-- Real Charity Photography -->
+                        <div class="hero-image-frame">
+                            <img src="assets/images/hero-charity.jpg" alt="Ilangathir Trust volunteers serving wholesome meals to rural children and supporting village elders" class="hero-img" width="700" height="525" loading="eager" fetchpriority="high">
+                            <div class="hero-image-gradient-overlay"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -281,7 +289,7 @@
         <!-- ════════ CTA ════════ -->
         <section class="cta-section" aria-label="Call to action">
             <div class="container">
-                <h2 class="reveal" data-i18n="cta_title">Join Us in Making a Difference</h2>
+                <h2 class="reveal" data-i18n="cta_title" data-i18n-html>Join Us in Making a Difference</h2>
                 <p class="reveal" data-i18n="cta_desc">Every contribution, whether time, money, or skills, helps us create lasting positive change in our community.</p>
                 <div class="cta-actions reveal">
                     <a href="contact.html" class="btn btn-amber" data-i18n="btn_donate">Donate Now</a>

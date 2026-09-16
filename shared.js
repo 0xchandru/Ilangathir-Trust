@@ -184,8 +184,8 @@ function injectNavbar(activePage) {
                         <i class="fa-solid fa-hands-holding-child"></i>
                     </div>
                     <div class="drawer-brand-text">
-                        <span class="d-name">${CONFIG.shortName.ta}</span>
-                        <span class="d-sub">${CONFIG.name.en}</span>
+                        <span class="d-name brand-name" data-brand-name>${currentLang === 'ta' ? CONFIG.name.ta : CONFIG.name.en}</span>
+                        <span class="d-sub brand-sub" data-brand-sub>${currentLang === 'ta' ? CONFIG.name.en : CONFIG.subTitle.en}</span>
                     </div>
                 </div>
                 <button class="close-btn" onclick="closeDrawer()" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
@@ -458,7 +458,7 @@ function setLang(lang) {
         const val = t(key);
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             el.placeholder = val;
-        } else if (el.hasAttribute('data-i18n-html')) {
+        } else if (el.hasAttribute('data-i18n-html') || (typeof val === 'string' && val.includes('<'))) {
             el.innerHTML = val;
         } else {
             el.textContent = val;

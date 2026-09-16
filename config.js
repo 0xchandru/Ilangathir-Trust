@@ -146,6 +146,7 @@ const I18N_CONTENT = {
 
     // Stats Bar
     stat_lives: { en: "Lives Impacted", ta: "பயனடைந்த குடும்பங்கள்" },
+    stat_lives_touched: { en: "Lives Touched", ta: "பயனடைந்த மக்கள்" },
     stat_programs: { en: "Active Initiatives", ta: "செயலில் உள்ள திட்டங்கள்" },
     stat_volunteers: { en: "Heartfelt Volunteers", ta: "அர்ப்பணிப்புள்ள தொண்டர்கள்" },
     stat_years: { en: "Year Established", ta: "நிறுவப்பட்ட ஆண்டு" },
