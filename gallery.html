@@ -100,71 +100,71 @@
                     <div class="gallery-item reveal" data-category="food" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-bowl-food"></i>
-                            <span>Food Distribution</span>
+                            <span data-i18n="gallery_card_food1">Community Meal Distribution</span>
                         </div>
-                        <div class="gallery-overlay"><span data-i18n="svc_food_title">Food Distribution</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_food1">Community Meal Distribution</span></div>
                     </div>
                     <div class="gallery-item reveal" data-category="food" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-utensils"></i>
-                            <span>Community Meal</span>
+                            <span data-i18n="gallery_card_food2">Wholesome Nutrition Kits</span>
                         </div>
-                        <div class="gallery-overlay"><span>Community Meal</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_food2">Wholesome Nutrition Kits</span></div>
                     </div>
 
                     <!-- Education -->
                     <div class="gallery-item reveal" data-category="education" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-graduation-cap"></i>
-                            <span>Education Program</span>
+                            <span data-i18n="gallery_card_edu1">Student School Kit Distribution</span>
                         </div>
-                        <div class="gallery-overlay"><span data-i18n="svc_edu_title">Education Support</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_edu1">Student School Kit Distribution</span></div>
                     </div>
                     <div class="gallery-item reveal" data-category="education" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-book-open-reader"></i>
-                            <span>Student Scholarship</span>
+                            <span data-i18n="gallery_card_edu2">Youth Academic Mentoring</span>
                         </div>
-                        <div class="gallery-overlay"><span>Student Scholarship</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_edu2">Youth Academic Mentoring</span></div>
                     </div>
 
                     <!-- Events -->
                     <div class="gallery-item reveal" data-category="events" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <span>Trust Event</span>
+                            <span data-i18n="gallery_card_event1">Annual Trust Inauguration & Meet</span>
                         </div>
-                        <div class="gallery-overlay"><span>Trust Event</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_event1">Annual Trust Inauguration & Meet</span></div>
                     </div>
                     <div class="gallery-item reveal" data-category="events" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-award"></i>
-                            <span>Inauguration</span>
+                            <span data-i18n="gallery_card_event2">Village Community Outreach Forum</span>
                         </div>
-                        <div class="gallery-overlay"><span>Inauguration</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_event2">Village Community Outreach Forum</span></div>
                     </div>
 
                     <!-- Community -->
                     <div class="gallery-item reveal" data-category="community" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
-                            <i class="fa-solid fa-people-group"></i>
-                            <span>Community Service</span>
+                            <i class="fa-solid fa-shirt"></i>
+                            <span data-i18n="gallery_card_welfare1">Winter Clothing & Blanket Drive</span>
                         </div>
-                        <div class="gallery-overlay"><span data-i18n="svc_welfare_title">Community Welfare</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_welfare1">Winter Clothing & Blanket Drive</span></div>
                     </div>
                     <div class="gallery-item reveal" data-category="community" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
                             <i class="fa-solid fa-hand-holding-heart"></i>
-                            <span>Outreach Program</span>
+                            <span data-i18n="gallery_card_welfare2">Rural Assistance & Elder Care</span>
                         </div>
-                        <div class="gallery-overlay"><span>Outreach Program</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_welfare2">Rural Assistance & Elder Care</span></div>
                     </div>
                     <div class="gallery-item reveal" data-category="community" onclick="openLightbox('')">
                         <div class="gallery-placeholder">
-                            <i class="fa-solid fa-shirt"></i>
-                            <span>Clothing Drive</span>
+                            <i class="fa-solid fa-people-roof"></i>
+                            <span data-i18n="gallery_card_welfare3">Village Sanitation & Cleanliness</span>
                         </div>
-                        <div class="gallery-overlay"><span>Clothing Drive</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_card_welfare3">Village Sanitation & Cleanliness</span></div>
                     </div>
                 </div>
             </div>
@@ -174,10 +174,9 @@
         <section class="cta-section" aria-label="Call to action">
             <div class="container">
                 <h2 class="reveal" data-i18n="cta_title">Join Us in Making a Difference</h2>
-                <p class="reveal" data-i18n="cta_desc">Every contribution helps us create lasting positive change in our
-                    community.</p>
+                <p class="reveal" data-i18n="cta_desc">Every contribution helps us create lasting positive change in our community.</p>
                 <div class="cta-actions reveal">
-                    <a href="contact.html" class="btn btn-amber" data-i18n="btn_get_involved">Get Involved</a>
+                    <a href="contact.html" class="btn btn-amber" data-i18n="btn_donate">Donate Now</a>
                     <a href="contact.html" class="btn btn-outline" data-i18n="btn_contact_us">Contact Us</a>
                 </div>
             </div>
@@ -186,13 +185,14 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close"><i
-                class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
         <img id="lightbox-img" src="" alt="Gallery preview">
     </div>
 
     <footer id="site-footer" class="footer"></footer>
 
+    <!-- Scripts -->
+    <script src="config.js"></script>
     <script src="shared.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

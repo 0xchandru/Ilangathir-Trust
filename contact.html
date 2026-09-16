@@ -53,7 +53,7 @@
                                 <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <h4 data-i18n="contact_address_title">Our Address</h4>
-                                    <p data-i18n="site_address">Kallupatti, Dindigul - 624307, Tamil Nadu, India</p>
+                                    <p id="contactOfficeAddress" data-i18n="site_address">Kallupatti, Dindigul - 624307, Tamil Nadu, India</p>
                                 </div>
                             </div>
                             
@@ -61,8 +61,7 @@
                                 <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
                                 <div>
                                     <h4 data-i18n="contact_phone_title">Phone</h4>
-                                    <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
-                                    <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+                                    <p><a href="tel:+919876543210" id="contactPhonePrimary">+91 98765 43210</a></p>
                                 </div>
                             </div>
                             
@@ -70,7 +69,7 @@
                                 <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
                                 <div>
                                     <h4 data-i18n="contact_email_title">Email</h4>
-                                    <p><a href="mailto:info@ilangathirtrust.org">info@ilangathirtrust.org</a></p>
+                                    <p><a href="mailto:info@ilangathirtrust.org" id="contactEmailLink">info@ilangathirtrust.org</a></p>
                                 </div>
                             </div>
                             
@@ -78,69 +77,81 @@
                                 <div class="contact-card-icon"><i class="fa-solid fa-clock"></i></div>
                                 <div>
                                     <h4 data-i18n="contact_hours_title">Working Hours</h4>
-                                    <p data-i18n="contact_hours_val">Monday – Saturday: 9:00 AM – 6:00 PM</p>
+                                    <p id="contactOfficeHours" data-i18n="contact_hours_val">Monday – Saturday: 9:00 AM – 6:00 PM</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Bank Details -->
-                        <div class="bank-details reveal mt-40">
+                        <!-- Bank Details for Donations -->
+                        <div class="bank-details reveal">
                             <h4><i class="fa-solid fa-building-columns"></i> <span data-i18n="bank_title">Bank Details for Donations</span></h4>
+                            <p class="bank-subtitle-text" data-i18n="bank_subtitle">All donations are utilized directly for community food, student fees, and medical supplies.</p>
+                            
                             <div class="bank-field">
-                                <span class="bank-field-label">Account Name</span>
-                                <span class="bank-field-value">Ilangathir Trust</span>
+                                <span class="bank-field-label" data-i18n="bank_acc_name">Account Name</span>
+                                <span class="bank-field-value" id="bankAccName">Ilangathir Trust</span>
                             </div>
                             <div class="bank-field">
-                                <span class="bank-field-label">Account Number</span>
-                                <span class="bank-field-value">XXXX XXXX XXXX</span>
+                                <span class="bank-field-label" data-i18n="bank_acc_num">Account Number</span>
+                                <span class="bank-field-value highlight-acc" id="bankAccNum">XXXX XXXX XXXX</span>
                             </div>
                             <div class="bank-field">
-                                <span class="bank-field-label">IFSC Code</span>
-                                <span class="bank-field-value">XXXX0000000</span>
+                                <span class="bank-field-label" data-i18n="bank_ifsc">IFSC Code</span>
+                                <span class="bank-field-value" id="bankIfsc">XXXX0000000</span>
                             </div>
                             <div class="bank-field">
-                                <span class="bank-field-label">Bank Branch</span>
-                                <span class="bank-field-value">Dindigul Branch</span>
+                                <span class="bank-field-label" data-i18n="bank_name_label">Bank & Branch</span>
+                                <span class="bank-field-value" id="bankBranch">State Bank of India, Dindigul Main Branch</span>
                             </div>
+                            <div class="bank-field">
+                                <span class="bank-field-label" data-i18n="bank_upi_id">Direct UPI ID</span>
+                                <div class="upi-val-group">
+                                    <span class="bank-field-value" id="contactUpiId">ilangathirtrust@upi</span>
+                                    <button type="button" class="btn-copy-upi" onclick="copyUPI()" aria-label="Copy UPI ID">
+                                        <i class="fa-regular fa-copy"></i> <span data-i18n="btn_copy_upi">Copy UPI ID</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="modal-note mt-40" style="margin-top:14px; text-align:left;" data-i18n="bank_note">After making a donation, kindly share a screenshot via WhatsApp or Email so we can send an official receipt.</p>
                         </div>
                     </div>
 
                     <!-- Right: Form -->
                     <div class="contact-form reveal-right">
                         <h3 data-i18n="form_title">Send a Message</h3>
-                        <form onsubmit="event.preventDefault(); alert('Form submission simulated.');">
+                        <form id="contactForm" onsubmit="event.preventDefault(); showToast(t('form_success')); this.reset();">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name" data-i18n="form_name">Your Name</label>
-                                    <input type="text" id="name" required data-i18n="form_name">
+                                    <input type="text" id="name" required data-i18n-ph="form_name_ph" placeholder="e.g. Anand Kumar">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone" data-i18n="form_phone">Phone Number</label>
-                                    <input type="tel" id="phone" required data-i18n="form_phone">
+                                    <input type="tel" id="phone" required data-i18n-ph="form_phone_ph" placeholder="+91 98765 XXXXX">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" data-i18n="form_email">Your Email</label>
-                                <input type="email" id="email" data-i18n="form_email">
+                                <input type="email" id="email" data-i18n-ph="form_email_ph" placeholder="anand@example.com">
                             </div>
                             <div class="form-group">
                                 <label for="subject" data-i18n="form_subject">Subject</label>
-                                <input type="text" id="subject" required data-i18n="form_subject">
+                                <input type="text" id="subject" required data-i18n-ph="form_subject_ph" placeholder="Volunteering, Donation or Inquiry">
                             </div>
                             <div class="form-group">
                                 <label for="message" data-i18n="form_message">Your Message</label>
-                                <textarea id="message" required data-i18n="form_message"></textarea>
+                                <textarea id="message" required data-i18n-ph="form_message_ph" placeholder="Please write your thoughts or how you would like to collaborate..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <button type="submit" class="btn btn-amber btn-full">
                                 <i class="fa-solid fa-paper-plane"></i> <span data-i18n="form_submit">Send Message</span>
                             </button>
                         </form>
                     </div>
                 </div>
 
-                <!-- Google Maps (Placeholder coordinates for Dindigul) -->
+                <!-- Google Maps -->
                 <div class="map-wrapper reveal mt-40">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125585.55627236528!2d77.89311634954497!3d10.366710777598687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00ab43e74c8bc3%3A0x7d0ea3efd62b9a1a!2sDindigul%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1709289291104!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125585.55627236528!2d77.89311634954497!3d10.366710777598687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00ab43e74c8bc3%3A0x7d0ea3efd62b9a1a!2sDindigul%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1709289291104!5m2!1sen!2sin" title="Ilangathir Trust Location Map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -148,10 +159,38 @@
 
     <footer id="site-footer" class="footer"></footer>
 
+    <!-- Scripts -->
+    <script src="config.js"></script>
     <script src="shared.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initSite('contact');
+
+            // Populate contact page elements from config
+            if (typeof CONFIG !== 'undefined') {
+                const phoneEl = document.getElementById('contactPhonePrimary');
+                if (phoneEl && CONFIG.phones && CONFIG.phones.primary) {
+                    phoneEl.textContent = CONFIG.phones.primary;
+                    phoneEl.href = 'tel:' + CONFIG.phones.primary.replace(/\s/g, '');
+                }
+                const emailEl = document.getElementById('contactEmailLink');
+                if (emailEl && CONFIG.email) {
+                    emailEl.textContent = CONFIG.email;
+                    emailEl.href = 'mailto:' + CONFIG.email;
+                }
+                if (CONFIG.bankDetails) {
+                    const accName = document.getElementById('bankAccName');
+                    if (accName) accName.textContent = CONFIG.bankDetails.accountName;
+                    const accNum = document.getElementById('bankAccNum');
+                    if (accNum) accNum.textContent = CONFIG.bankDetails.accountNumber;
+                    const ifsc = document.getElementById('bankIfsc');
+                    if (ifsc) ifsc.textContent = CONFIG.bankDetails.ifscCode;
+                    const branch = document.getElementById('bankBranch');
+                    if (branch) branch.textContent = CONFIG.bankDetails.bankName + (CONFIG.bankDetails.branch ? ', ' + CONFIG.bankDetails.branch : '');
+                    const upi = document.getElementById('contactUpiId');
+                    if (upi) upi.textContent = CONFIG.bankDetails.upiId || '';
+                }
+            }
         });
     </script>
 </body>
